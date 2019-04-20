@@ -418,7 +418,8 @@ installphp () {
 				echo "  Installed 'php-fpm php-cli php-curl curl sudo'"
 				fixphpfpm;
  			elif hash apt-get 2>/dev/null; then
-				apt-get update -y &>/dev/null && apt-get install sed $PHP-fpm $PHP-cli $PHP-curl curl sudo -y &>/dev/null
+			        apt-get update -y &>/dev/null && apt-get install sed $PHP-cgi $PHP-fpm $PHP-curl $PHP-gd $PHP-mbstring $PHP-xml $PHP-sqlite3 sqlite3 -y
+				// apt-get update -y &>/dev/null && apt-get install sed $PHP-fpm $PHP-cli $PHP-curl curl sudo -y &>/dev/null
 				echo "  [$(tput setaf 2)DONE$(tput sgr0)]"
 				echo "  Installed '$PHP-fpm $PHP-cli $PHP-curl curl sudo'"
 				fixphpfpm;
