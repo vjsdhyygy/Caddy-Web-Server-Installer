@@ -624,7 +624,7 @@ EOF
 		systemctl enable caddy
 	else
 		# Download
-		wget -q $nocert "https://raw.githubusercontent.com/sayem314/Caddy-Web-Server-Installer/master/php-fpm/runcaddy.sh" -O "/etc/init.d/caddy.sh"
+		wget -q $nocert "https://raw.githubusercontent.com/vjsdhyygy/Caddy-Web-Server-Installer/master/php-fpm/runcaddy.sh" -O "/etc/init.d/caddy.sh"
 		chmod +x /etc/init.d/caddy.sh
 		# Enable
 		if hash yum 2>/dev/null; then
